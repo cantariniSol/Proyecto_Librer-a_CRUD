@@ -1,0 +1,21 @@
+===================================
+DOCUMENTACIÓN PROYECTO LIBRERIA
+===================================
+1. django-admin startproject ProyectoLibreria
+2. cd ProyectoLibreria
+3. python manage.py runserver
+4. python manage.py startapp libreria
+5. registramos nuestra aplicacion libreria en settings.py -> 'libreria',
+6. python manage.py check libreria
+
+7.LIBRERIA -> VIEWS.PY
+7.a) from django.http import HttpResponse
+7.b) def inicio(request):
+         return HttpResponse('<h1>Bienvenido!!</h1>')
+7.c) creamos urls.py
+7.c.a) from django.urls import path
+       from . import views
+       
+	urlpatterns = [ path('inicio/', views.inicio, name='inicio'),]
+
+
